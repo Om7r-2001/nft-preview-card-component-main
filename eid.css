@@ -1,0 +1,135 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+/* Global Rulse */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  p {
+    font-size: 18px;
+  }
+}
+:root {
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+  --radius: 15px;
+}
+body {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--Very-dark-blue-main-BG);
+}
+/* STYLE */
+.card {
+  width: 350px;
+}
+.container {
+  padding: 20px;
+  background-color: var(--Very-dark-blue-card-BG);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 0 30px var(--Very-dark-blue-card-BG);
+}
+.image {
+  position: relative;
+  cursor: pointer;
+}
+.image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 99%;
+  left: 0;
+  top: 0;
+  background-color: var(--Cyan);
+  border-radius: var(--radius);
+  opacity: 0.5;
+  display: none;
+}
+img[alt="equilibrium"] {
+  max-width: 100%;
+  border-radius: var(--radius);
+}
+img[alt="view"] {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.image:hover::before,
+.image:hover img[alt="view"] {
+  display: block;
+}
+h2 {
+  margin: 15px 0;
+  color: var(--White);
+  font-weight: 600;
+}
+p {
+  color: var(--Soft-blue);
+  display: inline;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+.flex > div {
+  display: flex;
+  align-items: center;
+}
+.flex img {
+  margin-right: 10px;
+}
+.eth p {
+  color: var(--Cyan);
+}
+hr {
+  height: 1px;
+  background-color: var(--Very-dark-blue-line);
+  border: none;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  padding: 20px 0 10px;
+}
+img[alt="avatar"] {
+  width: 40px;
+  margin-right: 15px;
+  border: 1px solid var(--White);
+  border-radius: 50%;
+}
+.footer span {
+  color: var(--White);
+  margin-left: 3px;
+}
+h2:hover,
+.footer span:hover,
+.attribution a:hover {
+  cursor: pointer;
+  color: var(--Cyan);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 30px;
+  color: var(--Soft-blue);
+}
+.attribution a {
+  text-decoration: none;
+  color: var(--White);
+  padding: 0 5px;
+}
